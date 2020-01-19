@@ -1,3 +1,4 @@
+# This is based off of https://raw.githubusercontent.com/hasura/graphql-engine/master/install-manifests/docker-compose/docker-compose.yaml
 version: "3.6"
 services:
   postgres:
