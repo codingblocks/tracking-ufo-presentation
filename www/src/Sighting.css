@@ -1,0 +1,20 @@
+.alien-card {
+  width: 300px;
+  text-align: center;
+}
+
+small {
+  font-size: 8pt;
+  color: gray;
+}
+
+.severity-critical {
+  color: #ff0000;
+}
+
+.alien-description {
+  text-align: left;
+  border: 1px solid silver !important;
+  border-radius: 5px;
+  padding: 0 10px 0 10px;
+}
