@@ -1,10 +1,10 @@
 {
-  "namespace": "clickstream",
-  "name": "codes",
+  "namespace": "net.codingblocks",
+  "name": "sighting",
   "type": "record",
   "fields": [
     {
-      "name": "id",
+      "name": "sightingId",
       "type": {
         "type": "int",
         "arg.properties": {
