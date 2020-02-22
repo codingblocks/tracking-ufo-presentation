@@ -1,40 +1,9 @@
 import React, { useState } from 'react'
 import './Sighting.css'
 import { InfoWindow, Marker } from 'react-google-maps'
-import { GiAlienBug } from 'react-icons/gi'
-
-// GiDread
-// GiNunFace
-// GiTransparentSlime
-// GiAmberMosquito
-// GiAnt
-// GiAnubis
-// GiAstronautHelmet
-// GiBattleMech
-// GiBrute
-// GiBullyMinion
-// GiCentaur
-// GiChicken
-// GiCigale
-// GiClown
-// GiDuck
-// GiEagleHead
-// GiElephantHead
-// GiFishMonster
-// GiGargoyle
-// GiGoblinHead
-// GiHelicoprion
-// GiIceGolem
-// GiInvisible
-// GiJasonMask
-// GiKenkuHead
-// GiKlingon
-// GiLed
-// GiLuchador
-// GiOgre
-// GiPanda
 
 export default ({
+  alienPic,
   alienType,
   alienDescription,
   position,
@@ -61,7 +30,7 @@ export default ({
       {infoOpen && (
         <InfoWindow>
           <div className='alien-card'>
-            <GiAlienBug fontSize='120pt' />
+            {alienPic}
             <h2>
               A wild {alienType} appeared!
               <br />
@@ -69,7 +38,7 @@ export default ({
 
             <div className='alien-description'>
               <p>
-                Severity: <b style={{ color: severityColor }}>{severity}</b>
+                Severity: <b style={{ color: severityColor }}>{severity}/10</b>
               </p>
               <p>Report Date: {sightingDate.toLocaleTimeString()}</p>
               <p>Confirmed Sightings: {sightingCount}</p>

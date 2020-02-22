@@ -161,3 +161,7 @@ const client = new ApolloClient({
 
 // Wrap the App in ApolloProvider, pass the client
 ```
+
+## Resources
+
+https://react-icons.netlify.com/#/icons/gi
