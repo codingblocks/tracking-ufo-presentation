@@ -1,0 +1,7 @@
+{
+  "name": "SchemaSourceConnector",
+  "config": {
+    "connector.class": "io.confluent.connect.storage.tools.SchemaSourceConnector",
+    "tasks.max": "1"
+  }
+}

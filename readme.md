@@ -16,6 +16,8 @@ x Click on a node to have info show up
 7. Hasura
 8. Map pull from Hasura
 9. Offline version
+10. slim down!
+11. Jaeger?
 
 ### Touch up slides
 
@@ -165,3 +167,8 @@ const client = new ApolloClient({
 ## Resources
 
 https://react-icons.netlify.com/#/icons/gi
+
+```
+curl -X DELETE -H "Content-Type: application/json" http://localhost:8083/connectors/datagen-sightings
+curl -X POST -H "Content-Type: application/json" --data @connect/datagen-sightings.config http://localhost:8083/connectors
+```

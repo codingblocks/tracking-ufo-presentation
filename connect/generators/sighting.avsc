@@ -1,0 +1,53 @@
+{
+  "namespace": "clickstream",
+  "name": "codes",
+  "type": "record",
+  "fields": [
+    {
+      "name": "id",
+      "type": "int"
+    },
+    {
+      "name": "code",
+      "type": "int"
+    },
+    {
+      "name": "definition",
+      "type": "string"
+    }
+  ],
+  "arg.properties": {
+    "options": [
+      {
+        "id": 1,
+        "code": 200,
+        "definition": "Successful"
+      },
+      {
+        "id": 2,
+        "code": 302,
+        "definition": "Redirect"
+      },
+      {
+        "id": 3,
+        "code": 404,
+        "definition": "Page not found"
+      },
+      {
+        "id": 4,
+        "code": 405,
+        "definition": "Method not allowed"
+      },
+      {
+        "id": 5,
+        "code": 406,
+        "definition": "Not acceptable"
+      },
+      {
+        "id": 6,
+        "code": 407,
+        "definition": "Proxy authentication required"
+      }
+    ]
+  }
+}
