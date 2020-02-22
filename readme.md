@@ -2,23 +2,6 @@
 
 TODO: What this talk is about
 
-# Goals for the day
-
-### Cool demo:
-
-x Get a map showing up on a page
-x Get a US map showing
-x Dynamically add / remove nodes to the map
-x Click on a node to have info show up
-
-5. DataGen the node data
-6. Kafka connector to db
-7. Hasura
-8. Map pull from Hasura
-9. Offline version
-10. slim down!
-11. Jaeger?
-
 ### Touch up slides
 
 ### Practice run
@@ -168,10 +151,39 @@ const client = new ApolloClient({
 
 https://react-icons.netlify.com/#/icons/gi
 
-```
-curl -X DELETE -H "Content-Type: application/json" http://localhost:8083/connectors/datagen-sightings
-curl -X POST -H "Content-Type: application/json" --data @connect/datagen-sightings.config http://localhost:8083/connectors
-```
-
 Alien generator:
 https://www.fantasynamegenerators.com/alien-descriptions.php
+
+Demo steps:
+
+1. Show the final product
+2. Show how data is generated in Kafka Gen
+3. [Show the topic](http://localhost:8000/#/cluster/default/topic/n/sightings/)
+4. [Show the connectors](http://localhost:8003/#/cluster/kafka-connect-1/connector/datagen-sightings)
+5. Show where the data is in Postgres
+6. Show how the data in Postgres is synced
+7. Show how the data is joined in the stream app
+8. Show how the UI consumes the data
+9. Show how the UI can consume streaming data from Postgres via Hasura/GraphQL
+
+# TODO
+
+## Demo
+
+x Get a map showing up on a page
+x Get a US map showing
+x Dynamically add / remove nodes to the map
+x Click on a node to have info show up
+x DataGen the node data
+
+6. Kafka connector to db
+7. Hasura?
+8. Map pull from Hasura
+9. Offline version
+10. slim down!
+11. Jaeger?
+
+Slides:
+Architecture diagrams
+
+Practice:

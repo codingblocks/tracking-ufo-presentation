@@ -28,8 +28,8 @@ services:
       ZOO_PORT: 2181
       ZOO_SERVERS: server.1=zoo1:2888:3888
     volumes:
-      - ./full-stack/zoo1/data:/data
-      - ./full-stack/zoo1/datalog:/datalog
+      - zooData:/data
+      - zooLog:/datalog
   kafka1:
     image: confluentinc/cp-kafka:5.3.1
     hostname: kafka1
@@ -45,7 +45,7 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_AUTO_CREATE_TOPICS_ENABLE: "true"
     volumes:
-      - ./full-stack/kafka1/data:/var/lib/kafka/data
+      - brokerData:/var/lib/kafka/data
     depends_on:
       - zoo1
   kafka-connect:
@@ -72,9 +72,8 @@ services:
       CONNECT_OFFSET_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_STATUS_STORAGE_REPLICATION_FACTOR: "1"
       CONNECT_PLUGIN_PATH: "/usr/share/java,/etc/kafka-connect/jars,/usr/share/confluent-hub-components"
-      CLASSPATH: /usr/schema/sighting.avsc
     volumes:
-      - ./connect/generators:/usr/schema/
+      - ./connect/sighting.avsc:/usr/schema/sighting.avsc
     depends_on:
       - zoo1
       - kafka1
@@ -130,3 +129,8 @@ services:
       - zoo1
       - kafka1
       - kafka-rest-proxy
+volumes:
+  zooData:
+  zooLog:
+  brokerData:
+  connect:
