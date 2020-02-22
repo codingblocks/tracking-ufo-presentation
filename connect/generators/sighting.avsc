@@ -5,49 +5,50 @@
   "fields": [
     {
       "name": "id",
-      "type": "int"
-    },
-    {
-      "name": "code",
-      "type": "int"
-    },
-    {
-      "name": "definition",
-      "type": "string"
-    }
-  ],
-  "arg.properties": {
-    "options": [
-      {
-        "id": 1,
-        "code": 200,
-        "definition": "Successful"
-      },
-      {
-        "id": 2,
-        "code": 302,
-        "definition": "Redirect"
-      },
-      {
-        "id": 3,
-        "code": 404,
-        "definition": "Page not found"
-      },
-      {
-        "id": 4,
-        "code": 405,
-        "definition": "Method not allowed"
-      },
-      {
-        "id": 5,
-        "code": 406,
-        "definition": "Not acceptable"
-      },
-      {
-        "id": 6,
-        "code": 407,
-        "definition": "Proxy authentication required"
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "iteration": {
+            "start": 1
+          }
+        }
       }
-    ]
-  }
+    },
+    {
+      "name": "alienTypeId",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 12
+          }
+        }
+      }
+    },
+    {
+      "name": "latitude",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {
+            "min": 26.1,
+            "max": 26.2
+          }
+        }
+      }
+    },
+    {
+      "name": "longitude",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {
+            "min": -81,
+            "max": -80
+          }
+        }
+      }
+    }
+  ]
 }
