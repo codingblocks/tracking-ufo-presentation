@@ -3,7 +3,7 @@ import './Sighting.css'
 import { InfoWindow, Marker } from 'react-google-maps'
 
 export default ({
-  alienPic,
+  alienImage,
   alienType,
   alienDescription,
   position,
@@ -30,7 +30,7 @@ export default ({
       {infoOpen && (
         <InfoWindow>
           <div className='alien-card'>
-            {alienPic}
+            {alienImage}
             <h2>
               A wild {alienType} appeared!
               <br />

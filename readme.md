@@ -25,7 +25,9 @@ Create a maps API key
 
 ```sh
 docker-compose up -d
-cd www
+cd connect
+bash ./refresh.sh
+cd ../www
 npm install
 npm start
 ```

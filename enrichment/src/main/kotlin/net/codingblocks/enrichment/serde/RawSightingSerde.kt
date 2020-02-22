@@ -1,6 +1,7 @@
-package net.codingblocks.enrichment
+package net.codingblocks.enrichment.serde
 
 import com.google.gson.Gson
+import net.codingblocks.enrichment.RawSighting
 import org.apache.kafka.common.serialization.Deserializer
 import org.apache.kafka.common.serialization.Serdes.WrapperSerde
 import org.apache.kafka.common.serialization.Serializer

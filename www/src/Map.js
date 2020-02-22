@@ -5,7 +5,7 @@ import { GiAlienBug, GiSparkSpirit } from 'react-icons/gi'
 
 const sightings = [
   {
-    alienPic: <GiAlienBug fontSize='120' />,
+    alienImage: <GiAlienBug fontSize='120' />,
     alienType: 'Iska Hopian',
     alienDescription:
       'These aliens are a type of cat, reported to love chocolate ice cream and warm blankets.',
@@ -18,7 +18,7 @@ const sightings = [
     severityColor: '#FF0000'
   },
   {
-    alienPic: <GiSparkSpirit fontSize='120' />,
+    alienImage: <GiSparkSpirit fontSize='120' />,
     alienType: 'Lakkia',
     alienDescription:
       'Their wide mouths and wide noses often make these aliens appear to be modest, but looks can be deceiving. Their ears are almost invisible and their hearing is amazing. They also have three horns on their heads.',

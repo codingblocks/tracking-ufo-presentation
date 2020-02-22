@@ -3,16 +3,16 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.17">
     <root id="1">
       <ServerVersion>12.1</ServerVersion>
-      <StartupTime>1582405065</StartupTime>
+      <StartupTime>1582407391</StartupTime>
     </root>
     <database id="2" parent="1" name="postgres">
       <ObjectId>13408</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>490</IntrospectionStateNumber>
+      <IntrospectionStateNumber>492</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16562|16564|1
-sequence|table|16637|16639|1
+sequence|table|16638|16640|1
 </Relations>
     </database>
     <role id="3" parent="1" name="pg_execute_server_program">
@@ -74,7 +74,7 @@ sequence|table|16637|16639|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>491</IntrospectionStateNumber>
+      <IntrospectionStateNumber>493</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="2" name="heap">
@@ -149,17 +149,17 @@ sequence|table|16637|16639|1
       <SchemaId>11</SchemaId>
     </extension>
     <sequence id="26" parent="16" name="alien_types_alien_type_id_seq">
-      <ObjectId>16637</ObjectId>
-      <StateNumber>488</StateNumber>
+      <ObjectId>16638</ObjectId>
+      <StateNumber>490</StateNumber>
       <Owner>postgres</Owner>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>integer</DataType>
     </sequence>
     <table id="27" parent="16" name="alien_types">
-      <ObjectId>16639</ObjectId>
+      <ObjectId>16640</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
     </table>
     <routine id="28" parent="16" name="armor">
       <ObjectId>16419</ObjectId>
@@ -562,63 +562,57 @@ sequence|table|16637|16639|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <DefaultExpression>nextval(&apos;alien_types_alien_type_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="65" parent="27" name="type">
       <Position>2</Position>
       <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="66" parent="27" name="description">
       <Position>3</Position>
       <DataType>varchar(1024)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="67" parent="27" name="image">
       <Position>4</Position>
       <DataType>varchar(64)|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="68" parent="27" name="svg">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="69" parent="27" name="severity">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="70" parent="27" name="modified_date">
       <Position>7</Position>
       <DataType>timestamp with time zone|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>488</StateNumber>
+      <StateNumber>490</StateNumber>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <TypeId>1184</TypeId>
     </column>
     <index id="71" parent="27" name="alien_types_pkey">
-      <ObjectId>16647</ObjectId>
-      <StateNumber>488</StateNumber>
+      <ObjectId>16648</ObjectId>
+      <StateNumber>490</StateNumber>
       <ColNames>alien_type_id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="72" parent="27" name="alien_types_pkey">
-      <ObjectId>16648</ObjectId>
-      <StateNumber>488</StateNumber>
+      <ObjectId>16649</ObjectId>
+      <StateNumber>490</StateNumber>
       <ColNames>alien_type_id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>alien_types_pkey</UnderlyingIndexName>

@@ -8,6 +8,6 @@ class EnrichmentApplication
 
 fun main(args: Array<String>) {
     runApplication<EnrichmentApplication>(*args)
-    Processor().process()
+    Enricher().enrich()
 }
 
