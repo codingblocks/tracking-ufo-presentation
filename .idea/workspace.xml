@@ -2,21 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef4ad89-5ee5-42ef-a021-f286b6451a09" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/Enricher.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/AlienTypeSerde.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/EnrichedSightingSerde.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect/alien-types.config" beforeDir="false" afterPath="$PROJECT_DIR$/connect/alien-types.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect/sighting.avsc" beforeDir="false" afterPath="$PROJECT_DIR$/connect/sighting.avsc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/EnrichmentApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/EnrichmentApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/Processor.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/RawSightingSerde.kt" beforeDir="false" afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/RawSightingSerde.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/connect/refresh.sh" beforeDir="false" afterPath="$PROJECT_DIR$/connect/refresh.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/www/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/www/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/www/src/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/Map.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/Sighting.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/Sighting.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +37,36 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="postgres@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="postgres: database" type="162271b6:PgImplModel$Database" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="public: schema" type="983ebcf7:PgImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
     </expand>
     <select />
@@ -150,7 +174,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582394744971</updated>
       <workItem from="1582394747901" duration="3341000" />
-      <workItem from="1582399671642" duration="6876000" />
+      <workItem from="1582399671642" duration="8099000" />
     </task>
     <servers />
   </component>
@@ -166,54 +190,54 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="639" y="214" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582405334314" />
-    <state width="1674" height="469" key="GridCell.Tab.0.bottom" timestamp="1582409143278">
+    <state width="1674" height="469" key="GridCell.Tab.0.bottom" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143278" />
-    <state width="1674" height="469" key="GridCell.Tab.0.center" timestamp="1582409143278">
+    <state width="1674" height="469" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.0.center" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143278" />
-    <state width="1674" height="469" key="GridCell.Tab.0.left" timestamp="1582409143278">
+    <state width="1674" height="469" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.0.left" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143278" />
-    <state width="1674" height="469" key="GridCell.Tab.0.right" timestamp="1582409143278">
+    <state width="1674" height="469" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.0.right" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143278" />
-    <state width="1674" height="469" key="GridCell.Tab.1.bottom" timestamp="1582409148501">
+    <state width="1674" height="469" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.1.bottom" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582409148501" />
-    <state width="1674" height="469" key="GridCell.Tab.1.center" timestamp="1582409148501">
+    <state width="1674" height="469" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.1.center" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582409148501" />
-    <state width="1674" height="469" key="GridCell.Tab.1.left" timestamp="1582409148500">
+    <state width="1674" height="469" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.1.left" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582409148500" />
-    <state width="1674" height="469" key="GridCell.Tab.1.right" timestamp="1582409148501">
+    <state width="1674" height="469" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.1.right" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582409148501" />
-    <state width="1674" height="469" key="GridCell.Tab.2.bottom" timestamp="1582409143198">
+    <state width="1674" height="469" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.2.bottom" timestamp="1582411488368">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143198" />
-    <state width="1674" height="469" key="GridCell.Tab.2.center" timestamp="1582409143198">
+    <state width="1674" height="469" key="GridCell.Tab.2.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488368" />
+    <state width="1674" height="469" key="GridCell.Tab.2.center" timestamp="1582411488368">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143198" />
-    <state width="1674" height="469" key="GridCell.Tab.2.left" timestamp="1582409143198">
+    <state width="1674" height="469" key="GridCell.Tab.2.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488368" />
+    <state width="1674" height="469" key="GridCell.Tab.2.left" timestamp="1582411488367">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143198" />
-    <state width="1674" height="469" key="GridCell.Tab.2.right" timestamp="1582409143198">
+    <state width="1674" height="469" key="GridCell.Tab.2.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
+    <state width="1674" height="469" key="GridCell.Tab.2.right" timestamp="1582411488368">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582409143198" />
+    <state width="1674" height="469" key="GridCell.Tab.2.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488368" />
     <state x="1250" y="356" key="Maven.ArtifactSearchDialog" timestamp="1582396730737">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>

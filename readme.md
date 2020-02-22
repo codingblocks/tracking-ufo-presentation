@@ -177,8 +177,8 @@ x Get a US map showing
 x Dynamically add / remove nodes to the map
 x Click on a node to have info show up
 x DataGen the node data
+x Kafka connector to db
 
-6. Kafka connector to db
 7. Hasura?
 8. Map pull from Hasura
 9. Offline version

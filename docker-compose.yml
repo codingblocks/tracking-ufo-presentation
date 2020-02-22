@@ -6,6 +6,7 @@ services:
     restart: always
     ports:
       - "5432:5432"
+
   graphql-engine:
     image: hasura/graphql-engine:v1.0.0
     ports:
@@ -17,6 +18,7 @@ services:
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:@postgres:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
       HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+
   zoo1:
     image: zookeeper:3.4.9
     restart: unless-stopped
@@ -30,6 +32,7 @@ services:
     volumes:
       - zooData:/data
       - zooLog:/datalog
+
   kafka1:
     image: confluentinc/cp-kafka:5.3.1
     hostname: kafka1
@@ -48,6 +51,7 @@ services:
       - brokerData:/var/lib/kafka/data
     depends_on:
       - zoo1
+
   kafka-connect:
     build:
       context: ./connect

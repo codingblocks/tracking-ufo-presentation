@@ -72,7 +72,7 @@ class Enricher {
                         count(alienType.alienTypeId)
                     )
                 }
-        ).to("enriched-sightings", Produced.with(Serdes.String(), EnrichedSightingSerde() ))
+        ).to("enriched-sightings", Produced.with(Serdes.String(), Serdes. ))
 
 
     val streams = KafkaStreams(builder.build(), props)

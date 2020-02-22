@@ -2,6 +2,30 @@ import React from 'react'
 import { GoogleMap } from 'react-google-maps'
 import Sighting from './Sighting'
 import { GiAlienBug, GiSparkSpirit } from 'react-icons/gi'
+const { Kafka } = require('kafkajs')
+const kafka = new Kafka({
+  clientId: 'ufo-ui',
+  brokers: ['localhost:9092']
+})
+const consumer = kafka.consumer({ groupId: 'ufo-ui-group' })
+
+const subscribe = async () => {
+  await consumer.connect().th
+  await consumer.subscribe({
+    topic: 'enriched-sightings',
+    fromBeginning: false
+  })
+
+  await consumer.run({
+    eachMessage: async ({ topic, partition, message }) => {
+      console.log({
+        value: message.value.toString()
+      })
+    }
+  })
+}
+
+subscribe()
 
 const sightings = [
   {
