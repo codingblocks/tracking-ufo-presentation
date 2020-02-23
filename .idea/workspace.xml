@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4ef4ad89-5ee5-42ef-a021-f286b6451a09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cfbc6f4f-9f57-4459-9489-7b8c82a0ce9a/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/entities/AlienType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/entities/EnrichedSighting.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/entities/RawSighting.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect/refresh.sh" beforeDir="false" afterPath="$PROJECT_DIR$/connect/refresh.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/www/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/www/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/src/Map.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/src/Map.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/Enricher.kt" beforeDir="false" afterPath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/Enricher.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/AlienTypeSerde.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/EnrichedSightingSerde.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/RawSightingSerde.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +92,9 @@
     </option>
   </component>
   <component name="ProjectId" id="1YAoQdcDv3IvPwG8MX9pqWGJhWM" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -111,6 +113,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/entities" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -121,6 +124,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="net.codingblocks.enrichment.entities" />
+      <recent name="net.codingblocks.enrichment.entities.serde" />
+      <recent name="net.codingblocks.enrichment" />
       <recent name="net.codingblocks.enrichment.serde" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
@@ -174,7 +180,7 @@
       <option name="presentableId" value="Default" />
       <updated>1582394744971</updated>
       <workItem from="1582394747901" duration="3341000" />
-      <workItem from="1582399671642" duration="8099000" />
+      <workItem from="1582399671642" duration="9452000" />
     </task>
     <servers />
   </component>
@@ -186,58 +192,74 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="2043" y="406" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582400348705" />
-    <state x="639" y="214" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1582405334314">
+    <state x="412" y="621" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1582424682710">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state x="639" y="214" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582405334314" />
-    <state width="1674" height="469" key="GridCell.Tab.0.bottom" timestamp="1582411488367">
+    <state x="412" y="621" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582424682710" />
+    <state x="590" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582424857346">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.0.center" timestamp="1582411488367">
+    <state x="590" y="451" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582424857346" />
+    <state x="639" y="214" width="479" height="978" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog" timestamp="1582424742715">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.0.left" timestamp="1582411488367">
+    <state x="639" y="214" width="479" height="978" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582424742715" />
+    <state x="1475" y="318" key="#xdebugger.evaluate" timestamp="1582425223172">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.0.right" timestamp="1582411488367">
+    <state x="1475" y="318" key="#xdebugger.evaluate/0.0.3440.1400@0.0.3440.1400" timestamp="1582425223172" />
+    <state width="423" height="646" key="DebuggerActiveHint" timestamp="1582425246510">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.1.bottom" timestamp="1582411488367">
+    <state width="423" height="646" key="DebuggerActiveHint/0.0.3440.1400@0.0.3440.1400" timestamp="1582425246510" />
+    <state width="3397" height="469" key="GridCell.Tab.0.bottom" timestamp="1582425144688">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.1.center" timestamp="1582411488367">
+    <state width="3397" height="469" key="GridCell.Tab.0.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144688" />
+    <state width="3397" height="469" key="GridCell.Tab.0.center" timestamp="1582425144687">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.1.left" timestamp="1582411488367">
+    <state width="3397" height="469" key="GridCell.Tab.0.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144687" />
+    <state width="3397" height="469" key="GridCell.Tab.0.left" timestamp="1582425144687">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.1.right" timestamp="1582411488367">
+    <state width="3397" height="469" key="GridCell.Tab.0.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144687" />
+    <state width="3397" height="469" key="GridCell.Tab.0.right" timestamp="1582425144688">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.2.bottom" timestamp="1582411488368">
+    <state width="3397" height="469" key="GridCell.Tab.0.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144688" />
+    <state width="3397" height="469" key="GridCell.Tab.1.bottom" timestamp="1582425149435">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488368" />
-    <state width="1674" height="469" key="GridCell.Tab.2.center" timestamp="1582411488368">
+    <state width="3397" height="469" key="GridCell.Tab.1.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582425149435" />
+    <state width="3397" height="469" key="GridCell.Tab.1.center" timestamp="1582425149434">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488368" />
-    <state width="1674" height="469" key="GridCell.Tab.2.left" timestamp="1582411488367">
+    <state width="3397" height="469" key="GridCell.Tab.1.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582425149434" />
+    <state width="3397" height="469" key="GridCell.Tab.1.left" timestamp="1582425149434">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488367" />
-    <state width="1674" height="469" key="GridCell.Tab.2.right" timestamp="1582411488368">
+    <state width="3397" height="469" key="GridCell.Tab.1.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582425149434" />
+    <state width="3397" height="469" key="GridCell.Tab.1.right" timestamp="1582425149434">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
-    <state width="1674" height="469" key="GridCell.Tab.2.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582411488368" />
+    <state width="3397" height="469" key="GridCell.Tab.1.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582425149434" />
+    <state width="3397" height="469" key="GridCell.Tab.2.bottom" timestamp="1582425144611">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="469" key="GridCell.Tab.2.bottom/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144611" />
+    <state width="3397" height="469" key="GridCell.Tab.2.center" timestamp="1582425144611">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="469" key="GridCell.Tab.2.center/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144611" />
+    <state width="3397" height="469" key="GridCell.Tab.2.left" timestamp="1582425144611">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="469" key="GridCell.Tab.2.left/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144611" />
+    <state width="3397" height="469" key="GridCell.Tab.2.right" timestamp="1582425144611">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state width="3397" height="469" key="GridCell.Tab.2.right/0.0.3440.1400@0.0.3440.1400" timestamp="1582425144611" />
     <state x="1250" y="356" key="Maven.ArtifactSearchDialog" timestamp="1582396730737">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -246,6 +268,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1221" y="343" key="SettingsEditor/0.0.3440.1400@0.0.3440.1400" timestamp="1582399705683" />
+    <state x="676" y="482" key="chooseDestDirectoryDialog" timestamp="1582424725233">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="676" y="482" key="chooseDestDirectoryDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582424725233" />
     <state x="1475" y="545" key="cloudConfig.PluginsDialog" timestamp="1582398556729">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -258,6 +284,10 @@
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
     <state x="1396" y="525" key="com.intellij.ide.util.TipDialog/0.0.3440.1400@0.0.3440.1400" timestamp="1582399707038" />
+    <state x="1406" y="416" width="627" height="568" key="find.popup" timestamp="1582425077993">
+      <screen x="0" y="0" width="3440" height="1400" />
+    </state>
+    <state x="1406" y="416" width="627" height="568" key="find.popup/0.0.3440.1400@0.0.3440.1400" timestamp="1582425077993" />
     <state x="1102" y="403" key="new project wizard" timestamp="1582395365072">
       <screen x="0" y="0" width="3440" height="1400" />
     </state>
@@ -271,9 +301,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/serde/AlienTypeSerde.kt</url>
+          <url>file://$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/entities/serde/AlienTypeSerde.kt</url>
           <line>2</line>
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/enrichment/src/main/kotlin/net/codingblocks/enrichment/Enricher.kt</url>
+          <line>32</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
