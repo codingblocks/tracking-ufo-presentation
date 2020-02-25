@@ -1,15 +1,3 @@
-DROP TABLE IF EXISTS cluster_config;
-INSERT INTO cluster_config (cluster_id, name, config) VALUES 
-('e0a11707-a77b-4abd-ae23-7b5af92046e5', 'local cluster', 'application.id=grafka
-group.id=grafka
-bootstrap.servers=kafka1:19092
-
-key.serializer=org.apache.kafka.common.serialization.StringSerializer
-value.serializer=org.apache.kafka.common.serialization.StringSerializer
-
-key.deserializer=org.apache.kafka.common.serialization.StringDeserializer
-value.deserializer=org.apache.kafka.common.serialization.StringDeserializer')
-
 DROP TABLE IF EXISTS alien_types;
 CREATE TABLE alien_types (
                              alien_type_id serial PRIMARY KEY,
@@ -39,6 +27,10 @@ VALUES
     3
 );
 
+/*
 update alien_types
 set severity = 3
 where alien_type_id = 1
+
+select * from "enriched-sightings"
+ */

@@ -13,7 +13,7 @@ class EnrichedSighting(
         val image: String,
         val severity: Int,
         val svg: String,
-        val sightingDate: Instant,
+        val sightingDate: String,
         val latitude: Double,
         val longitude: Double,
         val severityColor: String,
@@ -23,7 +23,69 @@ class EnrichedSighting(
         private val gson = Gson()
         override fun configure(map: Map<String?, *>?, b: Boolean) {}
         override fun serialize(topic: String, data: EnrichedSighting): ByteArray {
-            return gson.toJson(data).toByteArray(StandardCharsets.UTF_8)
+            val payload = gson.toJson(data)
+            val json = "{\n" +
+                    "  \"schema\": {\n" +
+                    "    \"type\": \"struct\",\n" +
+                    "    \"fields\": [\n" +
+                    "      {\n" +
+                    "        \"type\": \"string\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"alienType\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"string\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"alienDescription\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"string\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"image\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"int32\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"severity\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"string\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"svg\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"string\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"sightingDate\"\n" +
+                    "      },\n" +
+                    "\n" +
+                    "      {\n" +
+                    "        \"type\": \"double\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"latitude\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"double\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"longitude\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"string\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"severityColor\"\n" +
+                    "      },\n" +
+                    "      {\n" +
+                    "        \"type\": \"int32\",\n" +
+                    "        \"optional\": false,\n" +
+                    "        \"field\": \"sightingCount\"\n" +
+                    "      }\n" +
+                    "    ],\n" +
+                    "    \"optional\": false,\n" +
+                    "    \"name\": \"enriched-sightings\"\n" +
+                    "  },\n" +
+                    "  \"payload\": $payload" +
+                    "}\n"
+            return json.toByteArray(StandardCharsets.UTF_8)
         }
 
         override fun close() {}

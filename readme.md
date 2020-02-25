@@ -195,7 +195,7 @@ Slides:
 
 Setup:
 
-- docker-compose up -d
+- docker-compose up -Vd
 - schema exists? import.sql
 - connectors running? refresh.sh
 - start the website: www/npm start

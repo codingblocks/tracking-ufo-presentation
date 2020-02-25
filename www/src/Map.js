@@ -34,7 +34,7 @@ const sightings = [
     alienDescription:
       'These aliens are a type of cat, reported to love chocolate ice cream and warm blankets.',
     severity: '10',
-    sightingDate: new Date(),
+    sightingDate: new Date().toString(),
     sightingCount: 11,
     position: { lat: 26.0807983, lng: -80.2442118 },
     svgPath:

@@ -1,16 +1,9 @@
 package net.codingblocks.enrichment
 
-import com.fasterxml.jackson.databind.JsonNode
 import net.codingblocks.enrichment.entities.AlienType
 import net.codingblocks.enrichment.entities.EnrichedSighting
 import net.codingblocks.enrichment.entities.RawSighting
-import org.apache.avro.generic.GenericRecord
-import org.apache.kafka.common.serialization.Deserializer
-import org.apache.kafka.common.serialization.Serde
 import org.apache.kafka.common.serialization.Serdes
-import org.apache.kafka.common.serialization.Serializer
-import org.apache.kafka.connect.json.JsonDeserializer
-import org.apache.kafka.connect.json.JsonSerializer
 import org.apache.kafka.streams.KafkaStreams
 import org.apache.kafka.streams.StreamsBuilder
 import org.apache.kafka.streams.StreamsConfig
@@ -30,7 +23,7 @@ class Enricher {
         props[StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
 
         val builder = StreamsBuilder()
-        val sightings = builder.stream<String, RawSighting>("sightings", Consumed.with(Serdes.String(), RawSighting.Serde()))
+        val sightings = builder.stream<String, RawSighting>("raw-sightings", Consumed.with(Serdes.String(), RawSighting.Serde()))
         val alienTypes = builder.globalTable<String, AlienType>("alien-types", Consumed.with(Serdes.String(), AlienType.Serde()))
 
         sightings
@@ -44,7 +37,7 @@ class Enricher {
                                     alienType.image,
                                     alienType.severity,
                                     alienType.svg,
-                                    Instant.now(),
+                                    Instant.now().toString(),
                                     sighting.latitude,
                                     sighting.longitude,
                                     getColor(alienType.severity),
