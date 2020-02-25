@@ -9,7 +9,7 @@
       <ObjectId>13408</ObjectId>
       <Comment>default administrative connection database</Comment>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>509</IntrospectionStateNumber>
+      <IntrospectionStateNumber>511</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|16562|16564|1
 sequence|table|16638|16640|1
@@ -74,7 +74,7 @@ sequence|table|16638|16640|1
       <Comment>standard public schema</Comment>
       <StateNumber>276</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>510</IntrospectionStateNumber>
+      <IntrospectionStateNumber>512</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="17" parent="2" name="heap">

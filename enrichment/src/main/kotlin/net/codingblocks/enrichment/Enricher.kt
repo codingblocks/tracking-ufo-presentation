@@ -1,13 +1,23 @@
 package net.codingblocks.enrichment
 
+import com.fasterxml.jackson.databind.JsonNode
+import net.codingblocks.enrichment.entities.AlienType
 import net.codingblocks.enrichment.entities.EnrichedSighting
 import net.codingblocks.enrichment.entities.RawSighting
-import net.codingblocks.enrichment.entities.AlienType
+import org.apache.avro.generic.GenericRecord
+import org.apache.kafka.common.serialization.Deserializer
+import org.apache.kafka.common.serialization.Serde
 import org.apache.kafka.common.serialization.Serdes
+import org.apache.kafka.common.serialization.Serializer
+import org.apache.kafka.connect.json.JsonDeserializer
+import org.apache.kafka.connect.json.JsonSerializer
 import org.apache.kafka.streams.KafkaStreams
 import org.apache.kafka.streams.StreamsBuilder
 import org.apache.kafka.streams.StreamsConfig
-import org.apache.kafka.streams.kstream.*
+import org.apache.kafka.streams.kstream.Consumed
+import org.apache.kafka.streams.kstream.KeyValueMapper
+import org.apache.kafka.streams.kstream.Produced
+import org.apache.kafka.streams.kstream.ValueJoiner
 import java.time.Instant
 import java.util.*
 
@@ -41,7 +51,8 @@ class Enricher {
                                     count(sighting.alienTypeId)
                             )
                         }
-                ).to("enriched-sightings", Produced.with(Serdes.String(), EnrichedSighting.Serde()))
+                )
+                .to("enriched-sightings", Produced.with(Serdes.String(), EnrichedSighting.Serde()))
 
         val streams = KafkaStreams(builder.build(), props)
         streams.start()

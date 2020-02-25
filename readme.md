@@ -179,13 +179,23 @@ x Click on a node to have info show up
 x DataGen the node data
 x Kafka connector to db
 
-7. Hasura?
-8. Map pull from Hasura
-9. Offline version
-10. slim down!
-11. Jaeger?
+- map pull from Hasura!!
+- offline version
+- better data
+- slim down!
+- jaeger
 
 Slides:
-Architecture diagrams
 
-Practice:
+- Architecture diagrams
+- 3 Factor, Lambda, Kappa
+- Event-at-a-time processing
+- Basic building blocks
+- Practice x 3
+
+Setup:
+
+- docker-compose up -d
+- schema exists? import.sql
+- connectors running? refresh.sh
+- start the website: www/npm start
