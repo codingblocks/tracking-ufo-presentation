@@ -11,7 +11,7 @@ export default () => {
   const { data } = useSubscription(
     gql`
       subscription {
-        enriched_sightings(limit: 25, order_by: { sightingDate: desc }) {
+        enriched_sightings(limit: 100, order_by: { sightingDate: desc }) {
           alienType
           alienDescription
           image
@@ -47,7 +47,7 @@ export default () => {
     <React.Fragment>
       <GoogleMap defaultZoom={12} defaultCenter={conferenceLocation}>
         {sightings.map(s => (
-          <Sighting key={`${s.alienType}-${s.sightingCount}`} {...s} />
+          <Sighting key={`${s.alienType}-${s.sightingDate}`} {...s} />
         ))}
       </GoogleMap>
     </React.Fragment>

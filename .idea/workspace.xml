@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ef4ad89-5ee5-42ef-a021-f286b6451a09" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/data/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="4ef4ad89-5ee5-42ef-a021-f286b6451a09" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

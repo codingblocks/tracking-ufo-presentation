@@ -30,7 +30,8 @@ export default ({
       {infoOpen && (
         <InfoWindow>
           <div className='alien-card'>
-            <svg d={svgPath} />
+            {alienImage}
+            <svg d={svgPath} stroke={severityColor} />
             <h2>
               A wild {alienType} appeared!
               <br />
