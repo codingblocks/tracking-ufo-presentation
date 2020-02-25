@@ -32,8 +32,8 @@
         "type": "double",
         "arg.properties": {
           "range": {
-            "min": 26.1,
-            "max": 26.2
+            "min": 26,
+            "max": 29
           }
         }
       }
@@ -44,7 +44,7 @@
         "type": "double",
         "arg.properties": {
           "range": {
-            "min": -81,
+            "min": -82.5,
             "max": -80
           }
         }

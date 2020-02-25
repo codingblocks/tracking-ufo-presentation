@@ -31,6 +31,7 @@ class Enricher {
                         alienTypes,
                         KeyValueMapper<String, RawSighting, String> { _, sighting -> sighting.alienTypeId.toString() },
                         ValueJoiner<RawSighting, AlienType, EnrichedSighting> { sighting, alienType ->
+                            println("${alienType.type} at ${sighting.latitude}x${sighting.longitude}!")
                             EnrichedSighting(
                                     alienType.type,
                                     alienType.description,
@@ -45,7 +46,7 @@ class Enricher {
                             )
                         }
                 )
-                .to("enriched-sightings", Produced.with(Serdes.String(), EnrichedSighting.Serde()))
+                .to("enriched_sightings", Produced.with(Serdes.String(), EnrichedSighting.Serde()))
 
         val streams = KafkaStreams(builder.build(), props)
         streams.start()

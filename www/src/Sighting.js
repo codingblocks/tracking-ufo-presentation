@@ -40,6 +40,8 @@ export default ({
               <p>
                 Severity: <b style={{ color: severityColor }}>{severity}/10</b>
               </p>
+              <p>lat: {position.lat}</p>
+              <p>lng: {position.lng}</p>
               <p>Report Date: {sightingDate.toLocaleTimeString()}</p>
               <p>Confirmed Sightings: {sightingCount}</p>
               <p>{alienDescription}</p>
