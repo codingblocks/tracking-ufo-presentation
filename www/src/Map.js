@@ -10,7 +10,7 @@ export default () => {
   const { data } = useSubscription(
     gql`
       subscription {
-        enriched_sightings(limit: 25, order_by: { sightingDate: desc }) {
+        enriched_sightings(limit: 10, order_by: { sightingDate: desc }) {
           alienType
           alienDescription
           image

@@ -8,6 +8,8 @@ TODO
 - docker-compose up -Vd
 - connect to sql, run import.sql
 - run connect/refresh.sh to start up the data generator + connectors
+- configure Hasura: http://localhost:8080
+- start the Kafka streams app
 - start the website: www/npm start
 
 ## Resources
@@ -54,3 +56,10 @@ Slides:
 - Event-at-a-time processing
 - Basic building blocks
 - Practice x 3
+
+## Demo steps
+
+- Generate data with Kafka Connect Data Gen
+- Run the streams app
+- Hasura (create, snapshot, subscription)
+- Front-End
