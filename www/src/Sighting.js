@@ -30,7 +30,7 @@ export default ({
       {infoOpen && (
         <InfoWindow>
           <div className='alien-card'>
-            {alienImage}
+            <svg d={svgPath} />
             <h2>
               A wild {alienType} appeared!
               <br />
@@ -40,8 +40,6 @@ export default ({
               <p>
                 Severity: <b style={{ color: severityColor }}>{severity}/10</b>
               </p>
-              <p>lat: {position.lat}</p>
-              <p>lng: {position.lng}</p>
               <p>Report Date: {sightingDate.toLocaleTimeString()}</p>
               <p>Confirmed Sightings: {sightingCount}</p>
               <p>{alienDescription}</p>
