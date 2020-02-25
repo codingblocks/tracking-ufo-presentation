@@ -1,0 +1,54 @@
+{
+  "namespace": "net.codingblocks",
+  "name": "sighting",
+  "type": "record",
+  "fields": [
+    {
+      "name": "sightingId",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "iteration": {
+            "start": 1
+          }
+        }
+      }
+    },
+    {
+      "name": "alienTypeId",
+      "type": {
+        "type": "int",
+        "arg.properties": {
+          "range": {
+            "min": 1,
+            "max": 4
+          }
+        }
+      }
+    },
+    {
+      "name": "latitude",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {
+            "min": 26,
+            "max": 29
+          }
+        }
+      }
+    },
+    {
+      "name": "longitude",
+      "type": {
+        "type": "double",
+        "arg.properties": {
+          "range": {
+            "min": -82.5,
+            "max": -80
+          }
+        }
+      }
+    }
+  ]
+}
