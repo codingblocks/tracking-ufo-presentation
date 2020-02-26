@@ -1,123 +1,65 @@
-# Streaming Architectures
+# Monitoring UFOs with Streaming Architectures
 
-## Setup Hasura
+Real-time user experiences and streaming architectures are becoming more and more common. This presentation explains a little bit about common streaming architectures and the components
+TODO
 
-This sets us up with a Postgres database, Hasura's GraphQL engine
+## Setup:
 
-```sh
-docker-compose up -d
-```
+- docker-compose up -Vd
+- connect to sql, run import.sql
+- run connect/refresh.sh to start up the data generator + connectors
+- configure Hasura: http://localhost:8080
+- start the Kafka streams app
+- start the website: www/npm start
 
-We can connect to Postgres via localhost:5432, user "postgres" with no password.
+## Resources
 
-## Create the schema in postgres
+Coon Alien Icons:
+https://react-icons.netlify.com/#/icons/gi
 
-```sql
-CREATE TABLE bitcoin_prices (
-  date date,
-  open bigint,
-  high bigint,
-  low bigint,
-  close bigint,
-  volume bigint,
-  cap bigint
-);
-```
+Alien description generator:
+https://www.fantasynamegenerators.com/alien-descriptions.php
 
-## Hasura setup
+Demo steps:
 
-1. http://localhost:8080/console
-2. Data (track)
-3. GraphQL Subscription
-4. (separate tab) MyMutation
+1. Show the final product
+2. Show how data is generated in Kafka Gen
+3. [Show the topic](http://localhost:8000/#/cluster/default/topic/n/sightings/)
+4. [Show the connectors](http://localhost:8003/#/cluster/kafka-connect-1/connector/datagen-sightings)
+5. Show where the data is in Postgres
+6. Show how the data in Postgres is synced
+7. Show how the data is joined in the stream app
+8. Show how the UI consumes the data
+9. Show how the UI can consume streaming data from Postgres via Hasura/GraphQL
 
-```graphql
-subscription {
-  bitcoin_prices {
-    close
-    cap
-    date
-    high
-    low
-    open
-    volume
-  }
-}
-```
+# TODO
 
-```graphql
-mutation {
-  insert_bitcoin_prices(objects: {
-    cap: 1,
-    close: 2,
-    date: "2020-01-01",
-    high: 4,
-    low: 5,
-    open: 6,
-    volume: 7}) {
-    affected_rows
-    returning {
-      date
-    }
-  }
-}
-```
+## Demo
 
-yay! the subscription works, let's see what it looks like on from a front-end perspective
+x Get a map showing up on a page
+x Get a US map showing
+x Dynamically add / remove nodes to the map
+x Click on a node to have info show up
+x DataGen the node data
+x Kafka connector to db
 
-```bash
-create-react-app www
-cd www
+- offline version
+- better data
+- make public
+- slim down!
+- jaeger
 
-# https://www.apollographql.com/docs/react/get-started/
-npm install apollo-boost @apollo/react-hooks graphql
+Slides:
 
-# https://docs.hasura.io/1.0/graphql/manual/guides/integrations/apollo-subscriptions.html
-npm install --save apollo-client apollo-link-ws apollo-link-http apollo-link apollo-utilities apollo-cache-inmemory subscriptions-transport-ws
+- Architecture diagrams
+- 3 Factor, Lambda, Kappa
+- Event-at-a-time processing
+- Basic building blocks
+- Practice x 3
 
-npm start
-```
+## Demo steps
 
-Clear out the boilerplate, add this to the index.js
-
-```javascript
-import ApolloClient from "apollo-client";
-import { WebSocketLink } from 'apollo-link-ws';
-import { HttpLink } from 'apollo-link-http';
-import { split } from 'apollo-link';
-import { getMainDefinition } from 'apollo-utilities';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { ApolloProvider } from '@apollo/react-hooks';
-
-const httpLink = new HttpLink({
-  uri: "http://localhost:8080/v1/graphql", // use https for secure endpoint
-});
-
-// Create a WebSocket link:
-const wsLink = new WebSocketLink({
-  uri: "ws://localhost:8080/v1/graphql", // use wss for a secure endpoint
-  options: {
-    reconnect: true
-  }
-});
-
-// using the ability to split links, you can send data to each link
-// depending on what kind of operation is being sent
-const link = split(
-  // split based on operation type
-  ({ query }) => {
-    const { kind, operation } = getMainDefinition(query);
-    return kind === 'OperationDefinition' && operation === 'subscription';
-  },
-  wsLink,
-  httpLink,
-);
-
-// Instantiate client
-const client = new ApolloClient({
-  link,
-  cache: new InMemoryCache()
-})
-
-// Wrap the App in ApolloProvider, pass the client
-```
+- Generate data with Kafka Connect Data Gen
+- Run the streams app
+- Hasura (create, snapshot, subscription)
+- Front-End
