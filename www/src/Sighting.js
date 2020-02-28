@@ -23,7 +23,7 @@ export default ({
         fillColor: severityColor,
         fillOpacity: 0.9,
         strokeWeight: 0,
-        scale: 0.08
+        scale: 0.2
       }}
     >
       {infoOpen && (
