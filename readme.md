@@ -36,26 +36,11 @@ Demo steps:
 
 ## Demo
 
-x Get a map showing up on a page
-x Get a US map showing
-x Dynamically add / remove nodes to the map
-x Click on a node to have info show up
-x DataGen the node data
-x Kafka connector to db
+TODO:
 
-- offline version
-- better data
-- make public
 - slim down!
+- make public
 - jaeger
-
-Slides:
-
-- Architecture diagrams
-- 3 Factor, Lambda, Kappa
-- Event-at-a-time processing
-- Basic building blocks
-- Practice x 3
 
 ## Demo steps
 
