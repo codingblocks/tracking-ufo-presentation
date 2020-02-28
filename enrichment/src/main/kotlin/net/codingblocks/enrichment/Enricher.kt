@@ -16,12 +16,7 @@ import java.util.*
 
 class Enricher {
     fun enrich() {
-        val props = Properties()
-        props[StreamsConfig.APPLICATION_ID_CONFIG] = "sightings-enricher"
-        props[StreamsConfig.BOOTSTRAP_SERVERS_CONFIG] = "localhost:9092"
-        props[StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
-        props[StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
-
+        val props = getConfigs()
         val builder = StreamsBuilder()
         val sightings = builder.stream<String, RawSighting>("raw-sightings", Consumed.with(Serdes.String(), RawSighting.Serde()))
         val alienTypes = builder.globalTable<String, AlienType>("alien-types", Consumed.with(Serdes.String(), AlienType.Serde()))
@@ -62,5 +57,12 @@ class Enricher {
     private fun count(alienTypeId: Int): Int {
         counts[alienTypeId] = counts.getOrDefault(alienTypeId, 0) + 1
         return counts[alienTypeId]!!
+    }
+
+    private fun getConfigs() = Properties().apply {
+        this[StreamsConfig.APPLICATION_ID_CONFIG] = "sightings-enricher"
+        this[StreamsConfig.BOOTSTRAP_SERVERS_CONFIG] = "localhost:9092"
+        this[StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
+        this[StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
     }
 }
