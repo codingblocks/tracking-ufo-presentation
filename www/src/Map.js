@@ -19,7 +19,6 @@ export default () => {
           severity
           severityColor
           sightingCount
-          svg
           sightingDate
         }
       }
@@ -38,7 +37,7 @@ export default () => {
               sightingDate: new Date(a.sightingDate),
               sightingCount: a.sightingCount,
               position: { lat: a.latitude, lng: a.longitude },
-              svgPath: a.svg,
+              alienImage: a.image,
               severityColor: a.severityColor
             }
           })

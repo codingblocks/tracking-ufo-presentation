@@ -9,7 +9,7 @@ export default ({
   severity,
   sightingDate,
   sightingCount,
-  svgPath,
+  alienImage,
   severityColor
 }) => {
   const [infoOpen, setInfoOpen] = useState(false)
@@ -18,25 +18,12 @@ export default ({
     <Marker
       position={position}
       onClick={() => setInfoOpen(!infoOpen)}
-      icon={{
-        path: svgPath,
-        fillColor: severityColor,
-        fillOpacity: 0.9,
-        strokeWeight: 0,
-        scale: 0.2
-      }}
+      icon={`http://localhost:3000/aliens/small/${alienImage}`}
     >
       {infoOpen && (
         <InfoWindow>
           <div className='alien-card'>
-            <svg
-              fill={severityColor}
-              viewBox='0 0 512 512'
-              stroke='black'
-              strokeWidth='4'
-            >
-              <path d={svgPath} />
-            </svg>
+            <img src={`http://localhost:3000/aliens/large/${alienImage}`} />
             <h2>
               A wild {alienType} appeared!
               <br />
@@ -44,7 +31,7 @@ export default ({
 
             <div className='alien-description'>
               <p>
-                Severity: <b style={{ color: severityColor }}>{severity}/10</b>
+                Severity: <b style={{ color: severityColor }}>{severity}/4</b>
               </p>
               <p>Report Date: {sightingDate.toLocaleTimeString()}</p>
               <p>Confirmed Sightings: {sightingCount}</p>
