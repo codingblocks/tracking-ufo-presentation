@@ -61,6 +61,7 @@ class Enricher {
 
     private fun getConfigs() = Properties().apply {
         this[StreamsConfig.APPLICATION_ID_CONFIG] = "sightings-enricher"
+        this[StreamsConfig.STATE_DIR_CONFIG] = createTempDir("sightings-enricher").absolutePath
         this[StreamsConfig.BOOTSTRAP_SERVERS_CONFIG] = "localhost:9092"
         this[StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
         this[StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG] = Serdes.String().javaClass
